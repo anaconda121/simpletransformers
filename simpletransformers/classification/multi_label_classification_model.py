@@ -26,6 +26,9 @@ from transformers import (
     FlaubertTokenizer,
     LongformerConfig,
     LongformerTokenizer,
+    RemBertConfig,
+    RemBertForSequenceClassification,
+    RemBertTokenizer,
     RobertaConfig,
     RobertaTokenizer,
     XLMConfig,
@@ -50,6 +53,7 @@ from simpletransformers.custom_models.models import (
     ElectraForMultiLabelSequenceClassification,
     FlaubertForMultiLabelSequenceClassification,
     LongformerForMultiLabelSequenceClassification,
+    RemBertForMultiLabelSequenceClassification,
     RobertaForMultiLabelSequenceClassification,
     XLMForMultiLabelSequenceClassification,
     XLMRobertaForMultiLabelSequenceClassification,
@@ -144,6 +148,11 @@ class MultiLabelClassificationModel(ClassificationModel):
                 LongformerForMultiLabelSequenceClassification,
                 LongformerTokenizer,
             ),
+            "rembert": (
+                RemBertConfig,
+                RemBertForMultiLabelSequenceClassification,
+                RemBertTokenizer,
+            ),
             "roberta": (
                 RobertaConfig,
                 RobertaForMultiLabelSequenceClassification,
@@ -200,6 +209,7 @@ class MultiLabelClassificationModel(ClassificationModel):
             self.config = config_class.from_pretrained(model_name, **self.args.config)
             self.num_labels = self.config.num_labels
         self.pos_weight = pos_weight
+        self.loss_fct = None
 
         if use_cuda:
             if torch.cuda.is_available():

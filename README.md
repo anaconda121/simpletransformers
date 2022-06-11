@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Downloads](https://pepy.tech/badge/simpletransformers)](https://pepy.tech/project/simpletransformers)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-79-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-91-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Simple Transformers
@@ -94,8 +94,8 @@ However, there are necessary differences between the different models to ensure 
 
 The currently implemented task-specific `Simple Transformer` models, along with their task, are given below.
 
-| Task                                                      | Model                             |
-| --------------------------------------------------------- | --------------------------------- |
+| Task                                                      | Model                           |
+| --------------------------------------------------------- | ------------------------------- |
 | Binary and multi-class text classification                | `ClassificationModel`           |
 | Conversational AI (chatbot training)                      | `ConvAIModel`                   |
 | Language generation                                       | `LanguageGenerationModel`       |
@@ -107,6 +107,7 @@ The currently implemented task-specific `Simple Transformer` models, along with 
 | Regression                                                | `ClassificationModel`           |
 | Sentence-pair classification                              | `ClassificationModel`           |
 | Text Representation Generation                            | `RepresentationModel`           |
+| Document Retrieval                                        | `RetrievalModel`                |
 
 - **Please refer to the relevant section in the [docs](https://simpletransformers.ai/) for more information on how to use these models.**
 - Example scripts can be found in the [examples](https://github.com/ThilinaRajapakse/simpletransformers/tree/master/examples) directory.
@@ -161,7 +162,8 @@ predictions, raw_outputs = model.predict(["Sam was a Wizard"])
 
 ### Experiment Tracking with Weights and Biases
 
-- W&B Notebook -
+- Weights and Biases makes it incredibly easy to keep track of all your experiments. Check it out on Colab here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://wandb.me/simpletformers-QA-colab)
+
 
 ---
 
@@ -285,6 +287,20 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/reza-ebrahimi"><img src="https://avatars.githubusercontent.com/u/11276982?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Reza Ebrahimi</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=reza-ebrahimi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gabriben"><img src="https://avatars.githubusercontent.com/u/37249800?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gabriben</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=gabriben" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/peacekurella"><img src="https://avatars.githubusercontent.com/u/16362226?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Prashanth Kurella</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=peacekurella" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dopc"><img src="https://avatars.githubusercontent.com/u/29026534?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dopc</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=dopc" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/anaconda121"><img src="https://avatars.githubusercontent.com/u/38384138?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanish Tyagi</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=anaconda121" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/kongyurui"><img src="https://avatars.githubusercontent.com/u/58269794?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kongyurui</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=kongyurui" title="Code">💻</a></td>
+    <td align="center"><a href="https://ecs.victoria.ac.nz/Main/AndrewLensen"><img src="https://avatars.githubusercontent.com/u/4524224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Lensen</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=AndLen" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/jinschoi"><img src="https://avatars.githubusercontent.com/u/938840?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jinschoi</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=jinschoi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lekhang4497"><img src="https://avatars.githubusercontent.com/u/32765331?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Le Nguyen Khang</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=lekhang4497" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jordimas"><img src="https://avatars.githubusercontent.com/u/309265?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jordi Mas</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=jordimas" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mxa4646"><img src="https://avatars.githubusercontent.com/u/37767536?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mxa</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=mxa4646" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/MichelBartels"><img src="https://avatars.githubusercontent.com/u/17650521?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MichelBartels</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=MichelBartels" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/luketudge"><img src="https://avatars.githubusercontent.com/u/17992458?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Tudge</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=luketudge" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/sainttttt"><img src="https://avatars.githubusercontent.com/u/58609876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saint</b></sub></a><br /><a href="https://github.com/ThilinaRajapakse/simpletransformers/commits?author=sainttttt" title="Code">💻</a></td>
   </tr>
 </table>
 

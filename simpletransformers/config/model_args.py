@@ -56,6 +56,8 @@ class ModelArgs:
     learning_rate: float = 4e-5
     local_rank: int = -1
     logging_steps: int = 50
+    loss_type: str = None
+    loss_args: dict = field(default_factory=dict)
     manual_seed: int = None
     max_grad_norm: float = 1.0
     max_seq_length: int = 128
@@ -113,6 +115,8 @@ class ModelArgs:
             for key, value in asdict(self).items()
             if key not in self.not_saved_args
         }
+        if "settings" in args_for_saving["wandb_kwargs"]:
+            del args_for_saving["wandb_kwargs"]["settings"]
         return args_for_saving
 
     def save(self, output_dir):
@@ -346,6 +350,29 @@ class Seq2SeqArgs(ModelArgs):
                         "when loading the model."
                     )
                 self.update_from_dict(model_args)
+
+
+@dataclass
+class RetrievalArgs(Seq2SeqArgs):
+    """
+    Model args for a RetrievalModel
+    """
+
+    model_class: str = "RetrievalModel"
+    context_config: dict = field(default_factory=dict)
+    ddp_training: bool = False
+    embed_batch_size: int = 64
+    faiss_index_type: str = "IndexFlatIP"
+    hard_negatives: bool = False
+    include_title: bool = True
+    query_config: dict = field(default_factory=dict)
+    remove_duplicates_from_eval_passages: bool = False
+    retrieval_batch_size: int = 512
+    retrieve_n_docs: int = 10
+    save_passage_dataset: bool = True
+    train_context_encoder: bool = True
+    train_query_encoder: bool = True
+    use_hf_datasets: bool = True
 
 
 @dataclass

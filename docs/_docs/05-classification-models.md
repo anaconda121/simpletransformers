@@ -15,7 +15,7 @@ The `ClassificationModel` class is used for all text classification tasks except
 
 To create a `ClassificationModel`, you must specify a `model_type` and a `model_name`.
 
-- `model_type` should be one of the model types from the [supported models](/docs/classification-specifics/) (e.g. bert, electra, xlnet)
+- `model_type` should be one of the model types from the [supported models](/docs/classification-specifics/#supported-model-types) (e.g. bert, electra, xlnet)
 - `model_name` specifies the exact architecture and trained weights to use. This may be a Hugging Face Transformers compatible pre-trained model, a community model, or the path to a directory containing model files.
 
     **Note:** For a list of standard pre-trained models, see [here](https://huggingface.co/transformers/pretrained_models.html).
@@ -165,7 +165,7 @@ The `MultiLabelClassificationModel` is used for multi-label classification tasks
 
 To create a `MultiLabelClassificationModel`, you must specify a `model_type` and a `model_name`.
 
-- `model_type` should be one of the model types from the [supported models](/docs/intro-classification/) (e.g. bert, electra, xlnet)
+- `model_type` should be one of the model types from the [supported models](/docs/classification-specifics/#supported-model-types) (e.g. bert, electra, xlnet)
 - `model_name` specifies the exact architecture and trained weights to use. This may be a Hugging Face Transformers compatible pre-trained model, a community model, or the path to a directory containing model files.
 
     **Note:** For a list of standard pre-trained models, see [here](https://huggingface.co/transformers/pretrained_models.html).
@@ -296,7 +296,7 @@ Trains the model using 'train_df'
 
 * **eval_df** *(`dataframe`, optional)* - A DataFrame against which evaluation will be performed when evaluate_during_training is enabled. Is required if evaluate_during_training is enabled.
 
-* **kwargs** *(optional)* - Additional metrics that should be calculated. Pass in the metrics as keyword arguments *(name of metric: function to calculate metric)*. Refer to the [additional metrics](/docs/usage/#additional-evaluation-metrics) section.
+* **kwargs** *(optional)* - Additional metrics that should be calculated. Pass in the metrics as keyword arguments *(name of metric: function to calculate metric)*. Refer to the [additional metrics](/docs/tips-and-tricks/#additional-evaluation-metrics) section.
 E.g. `f1=sklearn.metrics.f1_score`.
 A metric function should take in two parameters. The first parameter will be the true labels, and the second parameter will be the predictions.
 {: .parameter-list}
@@ -356,7 +356,7 @@ Evaluates the model using 'eval_df'
 
 * **silent** *(`bool`, optional)* - If silent, tqdm progress bars will be hidden.
 
-* **kwargs** *(optional)* - Additional metrics that should be calculated. Pass in the metrics as keyword arguments *(name of metric: function to calculate metric)*. Refer to the [additional metrics](/docs/usage/#additional-evaluation-metrics).
+* **kwargs** *(optional)* - Additional metrics that should be calculated. Pass in the metrics as keyword arguments *(name of metric: function to calculate metric)*. Refer to the [additional metrics](/docs/tips-and-tricks/#additional-evaluation-metrics).
 E.g. `f1=sklearn.metrics.f1_score` section.
 A metric function should take in two parameters. The first parameter will be the true labels, and the second parameter will be the predictions.
 {: .parameter-list}
